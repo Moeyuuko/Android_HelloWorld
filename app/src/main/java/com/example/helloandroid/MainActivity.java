@@ -32,9 +32,9 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i("变量i=", String.valueOf(i)); //日志输出-检查变量
-                textView.setText(data[i]);//操作textView
-                if (i==data.length-1){//和数组变量相同就归零 不然数组超出 软件会崩溃
+                Log.i("变量i=", String.valueOf(i));   //日志输出-检查变量
+                textView.setText(data[i]);                //操作textView
+                if (i==data.length-1){                    //和数组变量相同就归零 不然数组超出 软件会崩溃
                     i=0;
                 }else {
                     i=i+1;
