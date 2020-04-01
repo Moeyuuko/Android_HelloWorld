@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private Button button;        //声明变量
     private Button button2;
     private Button button4;
+    private Button button7;
 
     private TextView textView;
     private int i;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         button = (Button)findViewById(R.id.button); //绑定组件
         button2 = (Button)findViewById(R.id.button2);
         button4 = (Button)findViewById(R.id.button4);
+        button7 = (Button)findViewById(R.id.button7);
 
         textView = (TextView) findViewById(R.id.textView);//绑定组件
         final String[] data={"Hello world!","你好世界!","こんにちは世界！","안녕하세요 세상!",
@@ -52,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i("新建窗口2=", "ok");
+                Log.i("新建窗口:", "2");
                 Intent intent=new Intent(MainActivity.this,Main2Activity.class); //新建意图
 
                 startActivity(intent);
@@ -62,8 +64,18 @@ public class MainActivity extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i("新建窗口3=", "ok");
+                Log.i("新建窗口:", "3");
                 Intent intent=new Intent(MainActivity.this,Main3Activity.class); //新建意图
+
+                startActivity(intent);
+            }
+        });
+
+        button7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("新建窗口:", "4");
+                Intent intent=new Intent(MainActivity.this,Main4Activity.class); //新建意图
 
                 startActivity(intent);
             }
