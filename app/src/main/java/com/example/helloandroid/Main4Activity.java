@@ -8,6 +8,9 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class Main4Activity extends AppCompatActivity {
     private Button button_finish;
@@ -15,6 +18,7 @@ public class Main4Activity extends AppCompatActivity {
     private Button button_clearFocus;
     private EditText PutExtra_TextData;
     private EditText Bundle_TextData;
+    private TextView textView_back;
     private String PutExtra_TextData_default_str;
     private String Bundle_TextData_default_str;
 
@@ -84,8 +88,8 @@ public class Main4Activity extends AppCompatActivity {
                 Bundle bundle = new Bundle();
                 bundle.putString("Bundle_Data",Bundle_TextData.getText().toString());
                 intent.putExtras(bundle);
-
-                startActivity(intent);
+                //带返回请求//
+                startActivityForResult(intent,1);
             }
         });
 
@@ -107,4 +111,16 @@ public class Main4Activity extends AppCompatActivity {
             }
         });
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1){
+            if (resultCode == 1) {
+                textView_back = (TextView) findViewById(R.id.textView_back);
+                textView_back.setText(data.getStringExtra("ExtraData"));
+            }
+        }
+
+    }
+
 }

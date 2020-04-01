@@ -22,6 +22,7 @@
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:ems="10"
+        android:gravity="center"
         android:inputType="textPersonName"
         android:text="putExtra()的传递数据"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,6 +36,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:gravity="center"
         android:inputType="textPersonName"
         android:text="Bundle对象的传递数据"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,4 +83,27 @@
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toEndOf="@+id/button8"
         app:layout_constraintTop_toBottomOf="@+id/editText_Bundle" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回:"
+        app:layout_constraintBottom_toTopOf="@+id/button_finish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button8"
+        app:layout_constraintVertical_bias="0.32999998" />
+
+    <TextView
+        android:id="@+id/textView_back"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="No Data"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 </androidx.constraintlayout.widget.ConstraintLayout>
