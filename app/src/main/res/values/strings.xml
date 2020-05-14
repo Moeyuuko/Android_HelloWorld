@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">HelloAndroid</string>
     <string name="moeyuuko">Moeyuuko</string>
+    <string name="back">返回</string>
 </resources>

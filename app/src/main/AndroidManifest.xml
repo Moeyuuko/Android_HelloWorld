@@ -15,7 +15,7 @@
         <activity android:name=".Main4Activity" android:screenOrientation="portrait" />
         <activity android:name=".Main3Activity" android:screenOrientation="portrait" />
         <activity android:name=".Main2Activity" android:screenOrientation="portrait" />
-        <activity android:name=".MainActivity" android:screenOrientation="portrait"> <!-- activity1 竖屏 -->
+        <activity android:name=".MainActivity"> <!-- activity1 竖屏 -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

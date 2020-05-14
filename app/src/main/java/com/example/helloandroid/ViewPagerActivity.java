@@ -6,6 +6,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +15,7 @@ public class ViewPagerActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private List<View> views;
     private MyNewAdapter myNewAdapter; //重写 继承 ViewPagerAdapter
+    private Button button11;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,5 +35,13 @@ public class ViewPagerActivity extends AppCompatActivity {
 
         myNewAdapter = new MyNewAdapter(views);
         viewPager.setAdapter(myNewAdapter);
+
+        button11 = (Button)findViewById(R.id.button11);
+        button11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 }
