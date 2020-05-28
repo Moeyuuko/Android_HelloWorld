@@ -35,8 +35,6 @@
         android:id="@+id/scrollView2"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.89"
@@ -46,8 +44,16 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:visibility="invisible" />
 
             <Button
                 android:id="@+id/button"
@@ -85,6 +91,15 @@
                     android:text="Activity3"
                     android:textSize="18sp" />
             </LinearLayout>
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="界面动画"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/button7"
@@ -130,7 +145,7 @@
                 android:layout_marginTop="5dp"
                 android:text="访问摄像头"
                 android:textSize="18sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
         </LinearLayout>
 

@@ -7,7 +7,7 @@
     tools:context=".Main5Activity">
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/moeyuuko"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"

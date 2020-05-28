@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private Button button7;
     private Button button9;
     private Button button10;
+    private Button button12;
     private Button button14;
 
     private TextView textView;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         button7 = (Button)findViewById(R.id.button7);
         button9 = (Button)findViewById(R.id.button9);
         button10 = (Button)findViewById(R.id.button10);
+        button12 = (Button)findViewById(R.id.button12);
         button14 = (Button)findViewById(R.id.button14);
 
         textView = (TextView) findViewById(R.id.textView);//绑定组件
@@ -109,10 +111,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        button14.setOnClickListener(new View.OnClickListener() {
+        button12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.i("新建窗口", "剪刀石头布");
+                Intent intent=new Intent(MainActivity.this,Main8Activity.class); //新建意图
+
+                startActivity(intent);
+            }
+        });
+
+        button14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("新建窗口", "动画");
                 Intent intent=new Intent(MainActivity.this,Main7Activity.class); //新建意图
 
                 startActivity(intent);
