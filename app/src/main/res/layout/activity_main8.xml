@@ -29,6 +29,7 @@
         android:id="@+id/textView_Animator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Animator"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"

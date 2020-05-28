@@ -1,17 +1,18 @@
 package com.example.helloandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.ButtonBarLayout;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView textView;
     private TextView textView2;
+    private TextView TextView_version;
+    private TextView TextView_SDK;
     private int i;
 
     @Override
@@ -41,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
         button10 = (Button)findViewById(R.id.button10);
         button12 = (Button)findViewById(R.id.button12);
         button14 = (Button)findViewById(R.id.button14);
+
+        TextView_version = (TextView)findViewById(R.id.TextView_version);
+        TextView_version.setText("V"+version(this));
+        TextView_SDK = (TextView)findViewById(R.id.textView_SDK);
+        TextView_SDK.setText("Android "+Build.VERSION.RELEASE+"\nSDK "+Build.VERSION.SDK);
+
+
+
 
         textView = (TextView) findViewById(R.id.textView);//绑定组件
         final String[] data={"Hello world!","你好世界!","こんにちは世界！","안녕하세요 세상!",
@@ -138,6 +149,20 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,"+1S",Toast.LENGTH_SHORT).show();
             }
         });
+
+
+    }
+
+    public static String version(Context context) {
+        PackageManager manager = context.getPackageManager();
+        String code = "0";
+        try {
+            PackageInfo info = manager.getPackageInfo(context.getPackageName(), 0);
+            code = info.versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return code;
     }
 
 }

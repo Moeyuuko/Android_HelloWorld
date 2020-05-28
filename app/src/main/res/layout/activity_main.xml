@@ -145,5 +145,21 @@
 
     </ScrollView>
 
+    <TextView
+        android:id="@+id/TextView_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="版本号"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_SDK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="安卓版本"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
