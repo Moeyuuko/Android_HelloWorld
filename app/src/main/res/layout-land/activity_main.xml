@@ -138,6 +138,15 @@
                 android:textSize="18sp" />
 
             <Button
+                android:id="@+id/button16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="进度条"
+                android:textSize="18sp" />
+
+            <Button
                 android:id="@+id/button15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -174,7 +183,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="版本号"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scrollView2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView

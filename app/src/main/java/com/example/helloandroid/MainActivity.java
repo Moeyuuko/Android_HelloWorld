@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private Button button12;
     private Button button14;
     private Button button13;
+    private Button button16;
 
     private TextView textView;
     private TextView textView2;
@@ -121,6 +122,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Log.i("新建窗口", "剪刀石头布");
                 Intent intent=new Intent(MainActivity.this,Main7Activity.class);
+                startActivity(intent);
+            }
+        });
+        button16 = (Button)findViewById(R.id.button16);
+        button16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("新建窗口", "进度条");
+                Intent intent=new Intent(MainActivity.this,MainActivity2.class);
                 startActivity(intent);
             }
         });
